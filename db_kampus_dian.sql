@@ -45,10 +45,10 @@ CREATE TABLE `dbdosen` (
 --
 
 INSERT INTO `dbdosen` (`id_dosen`, `nip`, `nama_dosen`, `alamat`, `tgl_lahir`, `jabatan`, `email`, `telp`) VALUES
-(1, '13425367', 'Anton', 'Jalan Indah Permata', '2023-05-31', 'dosen', 'anton@gmail.com', '0823142465757');
-(2, '34566516', 'Giri', 'Pemogan', '1889-08-02', 'dosen', 'giri@gmail.com', '083629474923');
-(3, '51463256', 'Debora', 'Canggu', '1995-05-11', 'dosen', 'debora@gmail.com', '0896263478374');
-(4, '98576542', 'Marwa', 'Kuta', '1978-06-25', 'dosen', 'marwa@gmail.com', '08537732823878');
+(1, '13425367', 'Anton', 'Jalan Indah Permata', '2023-05-31', 'dosen', 'anton@gmail.com', '0823142465757'),
+(2, '34566516', 'Giri', 'Pemogan', '1889-08-02', 'dosen', 'giri@gmail.com', '083629474923'),
+(3, '51463256', 'Debora', 'Canggu', '1995-05-11', 'dosen', 'debora@gmail.com', '0896263478374'),
+(4, '98576542', 'Marwa', 'Kuta', '1978-06-25', 'dosen', 'marwa@gmail.com', '08537732823878'),
 (5, '56437646', 'Susi', 'Jimbaran', '1974-10-20', 'dosen', 'susi@gmail.com', '081805350386');
 
 -- --------------------------------------------------------
@@ -101,9 +101,9 @@ CREATE TABLE `dbmatakuliah` (
 
 INSERT INTO `dbmatakuliah` (`id_matakuliah`, `nama_matakuliah`, `sks`, `program_studi`, `kode_matakuliah`) VALUES
 (1, 'Desain Web', 3, 'Teknik Informatika', '1A'),
-(2, 'Pemrograman Web', 3, 'Teknik Informatika', '2A');
-(3, 'Pemrograman Mobile', 3, 'Teknik Informatika', '3A');
-(4, 'Pemrograman Desktop', 3, 'Teknik Informatika', '4A');
+(2, 'Pemrograman Web', 3, 'Teknik Informatika', '2A'),
+(3, 'Pemrograman Mobile', 3, 'Teknik Informatika', '3A'),
+(4, 'Pemrograman Desktop', 3, 'Teknik Informatika', '4A'),
 (5, 'Pemrograman Berorientasi Objek', 3, 'Teknik Informatika', '5A');
 
 -- --------------------------------------------------------
@@ -127,9 +127,9 @@ CREATE TABLE `dbuser` (
 
 INSERT INTO `dbuser` (`id_user`, `nama_user`, `alamat_user`, `no_hp`, `username`, `password`) VALUES
 (1, 'Dewi Antari', 'Br.Lebih Duur Kaja,Gianyar', '089377828998', 'antari2534', 'siap86'),
-(2, 'Yohanes', 'Br.Tegehe,Batubulan', '081287489234', 'yohanes09', 'kerja45');
-(3, 'Rizky', 'Br.Sanur,Sanur', '0843257666', 'rizky08', 'rizkyuye');
-(4, 'Sayyi', 'Br.Kaja,Sesetan', '08324365789', 'sayyi09', 'sayyi25');
+(2, 'Yohanes', 'Br.Tegehe,Batubulan', '081287489234', 'yohanes09', 'kerja45'),
+(3, 'Rizky', 'Br.Sanur,Sanur', '0843257666', 'rizky08', 'rizkyuye'),
+(4, 'Sayyi', 'Br.Kaja,Sesetan', '08324365789', 'sayyi09', 'sayyi25'),
 (5, 'Dewi', 'Br.Kaja,Sesetan', '08324365789', 'dewi09', 'dewi25');
 
 --
