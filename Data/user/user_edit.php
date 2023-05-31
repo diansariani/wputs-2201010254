@@ -46,7 +46,7 @@ if (isset($_POST['ubah'])) { //proses simpan perubahan data penerbit
   $username = $_POST['username'];
   $password = $_POST['password'];
 
-  $ubah = mysqli_query($koneksi, 'UPDATE dbuser SET id_user="' . $id_user . '",nama_user="' . $nama_user . '",alamat_user="' . $alamat_user . '",no_hp="' . $no_hp . '",username="' . $username . '",password="' . $password . '" WHERE id_user="' . $id . '"');
+  $ubah = mysqli_query($koneksi, 'UPDATE dbuser SET nama_user="' . $nama_user . '",alamat_user="' . $alamat_user . '",no_hp="' . $no_hp . '",username="' . $username . '",password="' . $password . '" WHERE id_user="' . $id . '"');
   if ($ubah) {
     echo '
           <script>
