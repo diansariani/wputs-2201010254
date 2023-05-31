@@ -6,10 +6,6 @@
     <h2 align="center">Form Tambah Data User</h2>
     <form method="POST">
       <div class="form-group">
-        <label for="exampleInputEmail1">Id User</label>
-        <input type="number" name="id_user" required class="form-control" id="exampleInputEmail1" aria-describedy="emailHelp" placeholder="Id User">
-      </div>
-      <div class="form-group">
         <label for="exampleInputEmail1">Nama User</label>
         <input type="text" name="nama_user" required class="form-control" id="exampleInputEmail1" aria-describedy="emailHelp" placeholder="Nama User">
       </div>
@@ -44,7 +40,7 @@ if (isset($_POST['simpan'])) { //proses simpan data penerbit
   $username = $_POST['username'];
   $password = $_POST['password'];
 
-  $simpan = mysqli_query($koneksi, 'INSERT INTO dbuser(id_user,nama_user,alamat_user,no_hp,username,password) VALUES ("' . $id_user . '","' . $nama_user . '","' . $alamat_user . '","' . $no_hp . '","' . $username . '","' . $password . '")');
+  $simpan = mysqli_query($koneksi, 'INSERT INTO dbuser(nama_user,alamat_user,no_hp,username,password) VALUES ("' . $nama_user . '","' . $alamat_user . '","' . $no_hp . '","' . $username . '","' . $password . '")');
   if ($simpan) {
     echo '
               <script>
@@ -52,7 +48,7 @@ if (isset($_POST['simpan'])) { //proses simpan data penerbit
                 window.location="index.php?hal=user"; //menuju ke halaman user
               </script>
             ';
-  }else {
+  } else {
     echo '
               <script>
                 alert("Gagal Menambah Data User");

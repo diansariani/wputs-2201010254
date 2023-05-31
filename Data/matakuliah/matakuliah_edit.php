@@ -20,8 +20,27 @@ $data   = mysqli_fetch_array($tampil);
         <input type="text" name="sks" value="<?php echo $data['sks'] ?>" required class="form-control" id="exampleInputPassword1" placeholder="SKS">
       </div>
       <div class="form-group">
-        <label for="exampleInputPassword1">Program Studi</label>
-        <input type="text" name="program_studi" value="<?php echo $data['program_studi'] ?>" required class="form-control" id="exampleInputPassword1" placeholder="Program Studi">
+        <label for="exampleFormControlSelect1">Program Studi</label>
+        <select name="program_studi" class="form-control" id="exampleFormControlSelect1">
+          <option value="TI-MDI" <?php if ($data['program_studi'] == 'TI-MDI') {
+                                    echo 'selected';
+                                  } ?>>TI-MDI</option>
+          <option value="TI-KAB" <?php if ($data['program_studi'] == 'TI-KAB') {
+                                    echo 'selected';
+                                  } ?>>TI-KAB</option>
+          <option value="TI-PAR" <?php if ($data['program_studi'] == 'TI-PAR') {
+                                    echo 'selected';
+                                  } ?>>TI-PAR</option>
+          <option value="SK" <?php if ($data['program_studi'] == 'SK') {
+                                echo 'selected';
+                              } ?>>SK</option>
+          <option value="DKV" <?php if ($data['program_studi'] == 'DKV') {
+                                echo 'selected';
+                              } ?>>DKV</option>
+          <option value="BD" <?php if ($data['program_studi'] == 'BD') {
+                                echo 'selected';
+                              } ?>>BD</option>
+        </select>
       </div>
       <div class="form-group">
         <label for="exampleInputPassword1">Kode Matakuliah</label>

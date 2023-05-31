@@ -12,10 +12,6 @@ $data   = mysqli_fetch_array($tampil);
     <h2 align="center">Form Ubah Data User</h2>
     <form method="POST">
       <div class="form-group">
-        <label for="exampleInputEmail1">Id User</label>
-        <input type="text" name="id_user" value="<?php echo $data['id_user'] ?>" required class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="ID User">
-      </div>
-      <div class="form-group">
         <label for="exampleInputEmail1">Nama User</label>
         <input type="text" name="nama_user" value="<?php echo $data['nama_user'] ?>" required class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Masukkan Nama User">
       </div>
@@ -58,7 +54,7 @@ if (isset($_POST['ubah'])) { //proses simpan perubahan data penerbit
             window.location="index.php?hal=user"; //menuju ke halaman user
           </script>
         ';
-  }else {
+  } else {
     echo '
               <script>
                 alert("Gagal Mengubah Data User");

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Waktu pembuatan: 30 Bulan Mei 2023 pada 21.09
+-- Waktu pembuatan: 31 Bulan Mei 2023 pada 06.25
 -- Versi server: 10.4.22-MariaDB
 -- Versi PHP: 8.1.2
 
@@ -67,7 +67,7 @@ CREATE TABLE `dbmahasiswa` (
   `email` varchar(50) NOT NULL,
   `telp` varchar(20) NOT NULL,
   `semester` int(11) NOT NULL,
-  `jenis_kelamin` varchar(30) NOT NULL
+  `jenis_kelamin` enum('Laki-laki','Perempuan') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -75,11 +75,11 @@ CREATE TABLE `dbmahasiswa` (
 --
 
 INSERT INTO `dbmahasiswa` (`id_mahasiswa`, `nim`, `nama_mahasiswa`, `alamat`, `tgl_lahir`, `program_studi`, `email`, `telp`, `semester`, `jenis_kelamin`) VALUES
-(1, '19101437', 'Axel', 'panjer', '2000-11-07', 'TI-MDI', 'jeremia123.jm@gmail.com', '08123456789', 8, 'Laki-Laki'),
+(1, '19101437', 'Axel', 'panjer', '2000-11-07', 'TI-MDI', 'jeremia123.jm@gmail.com', '08123456789', 8, 'Laki-laki'),
 (2, '19101131', 'indri', 'renon', '2023-05-31', 'TI-MDI', 'indri@gmail.com', '08243567992', 8, 'Perempuan'),
 (3, '20202020', 'Dian', 'batubulan', '2002-02-14', 'TI-KAB', 'dian@gmail.com', '08213526374', 2, 'Perempuan'),
-(4, '20213768', 'Agus', 'tukad pancoran', '2001-06-12', 'SK', 'agus@gmail.com', '082143524637', 6, 'Laki-Laki'),
-(5, '20218975', 'Budi', 'kerobokan', '2015-02-13', 'BD', 'budi@gmail.com', '08134525665', 4, 'Laki-Laki');
+(4, '20213768', 'Agus', 'tukad pancoran', '2001-06-12', 'SK', 'agus@gmail.com', '082143524637', 6, 'Laki-laki'),
+(5, '20218975', 'Budi', 'kerobokan', '2015-02-13', 'BD', 'budi@gmail.com', '08134525665', 4, 'Laki-laki');
 
 -- --------------------------------------------------------
 
@@ -100,11 +100,11 @@ CREATE TABLE `dbmatakuliah` (
 --
 
 INSERT INTO `dbmatakuliah` (`id_matakuliah`, `nama_matakuliah`, `sks`, `program_studi`, `kode_matakuliah`) VALUES
-(1, 'Desain Web', 3, 'Teknik Informatika', '1A'),
-(2, 'Pemrograman Web', 3, 'Teknik Informatika', '2A'),
-(3, 'Pemrograman Mobile', 3, 'Teknik Informatika', '3A'),
-(4, 'Pemrograman Desktop', 3, 'Teknik Informatika', '4A'),
-(5, 'Pemrograman Berorientasi Objek', 3, 'Teknik Informatika', '5A');
+(1, 'Desain Web', 3, 'TI-MDI', '1A'),
+(2, 'Pemrograman Web', 3, 'TI-PAR', '2A'),
+(3, 'Pemrograman Mobile', 3, 'SK', '3A'),
+(4, 'Pemrograman Desktop', 3, 'DKV', '4A'),
+(5, 'Pemrograman Berorientasi Objek', 3, 'SK', '5A');
 
 -- --------------------------------------------------------
 
@@ -168,7 +168,7 @@ ALTER TABLE `dbuser`
 -- AUTO_INCREMENT untuk tabel `dbdosen`
 --
 ALTER TABLE `dbdosen`
-  MODIFY `id_dosen` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_dosen` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT untuk tabel `dbmahasiswa`
@@ -177,10 +177,16 @@ ALTER TABLE `dbmahasiswa`
   MODIFY `id_mahasiswa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
+-- AUTO_INCREMENT untuk tabel `dbmatakuliah`
+--
+ALTER TABLE `dbmatakuliah`
+  MODIFY `id_matakuliah` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT untuk tabel `dbuser`
 --
 ALTER TABLE `dbuser`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -14,8 +14,15 @@
         <input type="number" name="sks" required class="form-control" id="exampleInputPassword1" placeholder="SKS">
       </div>
       <div class="form-group">
-        <label for="exampleInputPassword1">Program Studi</label>
-        <input type="text" name="program_studi" required class="form-control" id="exampleInputPassword1" placeholder="Program Studi">
+        <label for="exampleFormControlSelect1">Program Studi</label>
+        <select name="program_studi" class="form-control" id="exampleFormControlSelect1">
+          <option value="TI-MDI">TI-MDI</option>
+          <option value="TI-KAB">TI-KAB</option>
+          <option value="TI-PAR">TI-PAR</option>
+          <option value="SK">SK</option>
+          <option value="DKV">DKV</option>
+          <option value="BD">BD</option>
+        </select>
       </div>
       <div class="form-group">
         <label for="exampleInputPassword1">Kode Matakuliah</label>
@@ -35,7 +42,8 @@ if (isset($_POST['simpan'])) { //proses simpan data matakuliah
   $program_studi = $_POST['program_studi'];
   $kode_matakuliah = $_POST['kode_matakuliah'];
 
-  $simpan = mysqli_query($koneksi, 'INSERT INTO dbmatakuliah(nama_matakuliah,sks,program_studi,kode_matakuliah) VALUES ("' . $nama_matakuliah . '","' . $sks . '","' . $program_studi . '","' . $kode_matakuliah . '")');
+  $simpan = mysqli_query($koneksi, 'INSERT INTO dbmatakuliah(nama_matakuliah,sks,program_studi,kode_matakuliah) VALUES (
+    "' . $nama_matakuliah . '","' . $sks . '","' . $program_studi . '","' . $kode_matakuliah . '")');
   if ($simpan) {
     echo '
               <script>

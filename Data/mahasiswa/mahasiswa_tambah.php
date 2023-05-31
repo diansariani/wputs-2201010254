@@ -23,35 +23,36 @@
           <option value="DKV">DKV</option>
           <option value="BD">BD</option>
         </select>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Alamat</label>
+        <input type="text" name="alamat" required class="form-control" id="exampleInputPassword1" placeholder="Alamat">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Telepon</label>
+        <input type="number" name="telp" required class="form-control" id="exampleInputPassword1" placeholder="Telepon">
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">Jenis Kelamin</label>
+        <select name="jenis_kelamin" class="form-control" id="exampleFormControlSelect1">
+          <option value="Laki-Laki">Laki-Laki</option>
+          <option value="Perempuan">Perempuan</option>
+        </select>
         <div class="form-group">
-          <label for="exampleInputPassword1">Alamat</label>
-          <input type="text" name="alamat" required class="form-control" id="exampleInputPassword1" placeholder="Alamat">
+          <label for="exampleInputPassword1">Tanggal Lahir</label>
+          <input type="date" name="tgl_lahir" required class="form-control" id="exampleInputPassword1" placeholder="Tanggal Lahir">
         </div>
         <div class="form-group">
-          <label for="exampleInputPassword1">Telepon</label>
-          <input type="number" name="telp" required class="form-control" id="exampleInputPassword1" placeholder="Telepon">
+          <label for="exampleInputPassword1">Email</label>
+          <input type="email" name="email" required class="form-control" id="exampleInputPassword1" placeholder="Email">
         </div>
         <div class="form-group">
-          <label for="exampleFormControlSelect1">Jenis Kelamin</label>
-          <select name="jenis_kelamin" class="form-control" id="exampleFormControlSelect1">
-            <option value="Laki-Laki">Laki-Laki</option>
-            <option value="Perempuan">Perempuan</option>
-          </select>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Tanggal Lahir</label>
-            <input type="date" name="tgl_lahir" required class="form-control" id="exampleInputPassword1" placeholder="Tanggal Lahir">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Email</label>
-            <input type="email" name="email" required class="form-control" id="exampleInputPassword1" placeholder="Email">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Semester</label>
-            <input type="number" name="semester" required class="form-control" id="exampleInputPassword1" placeholder="Semester">
-          </div>
+          <label for="exampleInputPassword1">Semester</label>
+          <input type="number" name="semester" required class="form-control" id="exampleInputPassword1" placeholder="Semester">
+        </div>
 
-          <input type="submit" name="simpan" class="btn btn-primary" value="Simpan">
-          <a href="index.php?hal=mahasiswa" class="btn btn-secondary">Batal</a>
+        <input type="submit" name="simpan" class="btn btn-primary" value="Simpan">
+        <a href="index.php?hal=mahasiswa" class="btn btn-secondary">Batal</a>
     </form>
   </div>
 </div>
